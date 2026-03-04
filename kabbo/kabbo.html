@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>TechFlow</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:Arial;
+display:flex;
+height:100vh;
+}
+
+input[type=radio]{
+display:none;
+}
+
+.sidebar{
+width:200px;
+background:#2c3e50;
+color:white;
+padding:20px;
+}
+
+.sidebar h1{
+text-align:center;
+font-size:30px;
+margin-bottom:40px;
+}
+
+.sidebar label{
+display:block;
+padding:15px;
+cursor:pointer;
+}
+
+.sidebar label:hover{
+background:#34495e;
+}
+
+.content{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#ecf0f1;
+}
+
+.form-box{
+background:white;
+padding:30px;
+width:300px;
+border-radius:8px;
+box-shadow:0px 0px 10px gray;
+display:none;
+}
+
+.title{
+font-size:26px;
+font-weight:bold;
+text-align:center;
+margin-bottom:15px;
+}
+
+.form-box label{
+display:block;
+margin-top:10px;
+font-weight:bold;
+font-size:14px;
+}
+
+.form-box input,
+.form-box select{
+width:100%;
+padding:8px;
+margin-top:5px;
+}
+
+.btn{
+width:100%;
+padding:8px;
+margin-top:15px;
+background:#3498db;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+#login:checked ~ .content #loginForm{
+display:block;
+}
+
+#register:checked ~ .content #registerForm{
+display:block;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<input type="radio" name="menu" id="login" checked>
+<input type="radio" name="menu" id="register">
+
+<div class="sidebar">
+
+<h1>TechFlow</h1>
+
+<label for="login">Login</label>
+<label for="register">Registration</label>
+
+</div>
+
+<div class="content">
+
+<div class="form-box" id="loginForm">
+
+<div class="title">Sign In</div>
+
+<form>
+
+<label>Email Address</label>
+<input type="text">
+
+<label>Password</label>
+<input type="password">
+
+<input type="button" value="Sign In" class="btn">
+
+</form>
+
+</div>
+
+<div class="form-box" id="registerForm">
+
+<div class="title">Create Account</div>
+
+<form>
+
+<label>Email Address</label>
+<input type="text">
+
+<label>Password</label>
+<input type="password">
+
+<label>Gender</label>
+
+<select>
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+</select>
+
+<input type="button" value="Register" class="btn">
+
+</form>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
